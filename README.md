@@ -1,4 +1,4 @@
-# docker_alpine_php
+# docker_ubuntu_php
 
 Ubuntu OS で動作する php のコンテナです
 
