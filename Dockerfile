@@ -1,20 +1,11 @@
-# ubuntu 18.4のOS取得
-FROM ubutun:18.4
+# ubuntu 20.04のOS取得
+FROM ubutun:20.04
 
-# 実行ディレクトリ
+# ####################
+# for php
+RUN apt-get update && apt-get install -y \
+    php
+
+# ####################
+# working directory
 WORKDIR /usr/app/src
-
-#　Dockerコマンド
-
-# 1. Dockerビルドでimage作成
-#     $ docker build -t img_ubu .
-
-# 2. Dockerコンテナの作成
-#   Volumeなし
-#     $ docker run -itd --name com_ubu img_ubu
-#   Volumeあり
-#     $ docker run -itd --volume /home/vagrant/Docker/ubu:/usr/app/src --name com_ubu img_ubu
-
-# 3. Dockerコンテナ実行
-#   ターミナル
-#     $ docker exec -it com_ubu sh
