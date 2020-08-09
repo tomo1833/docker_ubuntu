@@ -1,10 +1,10 @@
 # ubuntu 20.04のOS取得
-FROM ubutun:20.04
+FROM ubuntu:20.04
 
 # ####################
 # for php
 RUN apt-get update && apt-get install -y \
-    php
+    python
 
 # ####################
 # working directory
